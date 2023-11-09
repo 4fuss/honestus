@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <template
+    id="honestus_tweaks.web_signup_fields"
+    inherit_id="auth_signup.fields">
+    <xpath expr="//div[@class='mb-3 field-name']" position="after">
+      <div class="mb-3 field-mobile">
+          <label for="mobile">Mobile</label>
+          <input
+            type="text"
+            name="mobile"
+            t-att-value="mobile"
+            id="mobile"
+            class="form-control form-control-sm" />
+      </div>
+    </xpath>
+  </template>
+  <template
+    id="honestus_tweaks.portal_my_details_fields"
+    inherit_id="portal.portal_my_details_fields">
+    <xpath expr="//input[@name='phone']/parent::div" position="after">
+      <div t-attf-class="mb-3 #{error.get('mobile') and 'o_has_error' or ''} col-xl-6">
+            <label class="col-form-label" for="mobile">Mobile</label>
+            <input
+              type="text"
+              name="mobile"
+              t-attf-class="form-control #{error.get('mobile') and 'is-invalid' or ''}"
+              t-att-value="street or partner.mobile"/>
+        </div>
+    </xpath>
+  </template>
+</odoo>
