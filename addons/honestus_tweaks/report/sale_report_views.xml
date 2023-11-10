@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_honestus_order_product_tree" model="ir.ui.view">
+         <field name="name">honestus.report.tree</field>
+         <field name="model">honestus.report</field>
+         <field name="arch" type="xml">
+             <tree string="Honestus Report">
+                 <field name="customer"/>
+                 <field name="name"/>
+                 <field name="product_code"/>
+                 <field name="honestus_code"/>
+                 <field name="unit_price"/>
+                 <field name="honestus_price"/>
+                 <field name="margin"/>
+             </tree>
+         </field>
+    </record>
+
+    <record id="view_honestus_report_search" model="ir.ui.view">
+      <field name="name">honestus.report.search</field>
+      <field name="model">honestus.report</field>
+      <field name="arch" type="xml">
+        <search string="Honestus Report">
+          <group expand="1" string="Group By">
+            <filter string="Customer" name="group_customer" context="{'group_by':'customer'}"/>
+            <filter string="Order Ref" name="group_order_ref" context="{'group_by':'name'}"/>
+            <filter string="Product Code" name="group_product" context="{'group_by':'product_code'}"/>
+          </group>
+        </search>
+      </field>
+    </record>
+
+    <record id="honestus_tweaks.action_honestus_report" model="ir.actions.act_window">
+        <field name="name">Honestus Report</field>
+        <field name="res_model">honestus.report</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id"></field>
+        <field name="context">{'search_default_group_customer': 1}</field>
+    </record>
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <menuitem
+    id="sale.menu_sale_report"
+    sequence="40"
+    parent="sale.sale_menu_root"
+    name="Reporting">
+    <menuitem
+      id="sale_reporting_honestus_report"
+      name="Honestus Report"
+      action="honestus_tweaks.action_honestus_report"
+      sequence="30"/>
+    <menuitem
+      id="sale_analysis"
+      name="Sale Analysis"
+      action="sale.action_order_report_all"
+      sequence="20"/>
+  </menuitem>
+</odoo>

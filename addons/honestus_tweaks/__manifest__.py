@@ -11,7 +11,10 @@
     'category': 'Website',
     'license': 'LGPL-3',
     'data': [
+        'security/ir.model.access.csv',
+        'report/sale_report_views.xml',
         'views/templates.xml',
-        'views/sale_order_report_template.xml'
+        'views/sale_views.xml',
+        'views/sale_order_report_template.xml',
     ],
 }
