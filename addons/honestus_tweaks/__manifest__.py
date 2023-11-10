@@ -2,8 +2,9 @@
     'name': "Honestus dev assignment",
     'version': '16.0.1.0.0',
     'depends': [
-        'auth_signup',
         'base',
+        'auth_signup',
+        'sale',
         'website'
     ],
     'author': "Adam Kawczyński",

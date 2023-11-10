@@ -9,7 +9,7 @@ repos:
   rev: 6.1.0
   hooks:
     - id: flake8
-      args: ['--ignore=C0114']
+      args: ['--ignore=C0114,W503']
       exclude: __init__.py
 - repo: https://github.com/OCA/pylint-odoo
   rev: v9.0.1
