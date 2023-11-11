@@ -17,3 +17,12 @@ Task 2 is implemented in [product model](addons/honestus_tweaks/models/product.p
 ## Task 3
 
 Sale Order report is extended in [template](addons/honestus_tweaks/views/sale_order_report_template.xml). Product display name is redefined in [product model](addons/honestus_tweaks/models/product.py). Product display name is covered by [tests](addons/honestus_tweaks/tests/test_product.py).
+
+## Task 4
+
+Report is defined [here](addons/honestus_tweaks/repor).
+
+## Task 5 - Solution Design
+
+There is OCA's [queue_job_cron](https://github.com/OCA/queue/tree/16.0/queue_job_cron) module which can solve issue with long running background jobs. It runs on separate thread so it doesn't affect Odoo's web workers.
+Implementation estimation: 2 days.
