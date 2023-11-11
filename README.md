@@ -20,7 +20,7 @@ Sale Order report is extended in [template](addons/honestus_tweaks/views/sale_or
 
 ## Task 4
 
-Report is defined [here](addons/honestus_tweaks/repor).
+Report is defined [here](addons/honestus_tweaks/report).
 
 ## Task 5 - Solution Design
 
